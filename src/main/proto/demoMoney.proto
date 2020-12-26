@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.tolearn.endpoint";
+option java_outer_classname = "DemoMoney";
+option objc_class_prefix = "HLW";
+
+package com.tolearn;
+
+service DemoMoneyService {
+  rpc send (DemoMoneyRequest) returns (DemoMoneyReply) {}
+}
+
+message DemoMoneyRequest {
+  string name = 1;
+}
+
+message DemoMoneyReply {
+  string message = 1;
+}
